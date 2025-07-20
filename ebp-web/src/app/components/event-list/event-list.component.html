@@ -16,7 +16,7 @@
         <td>
           <button 
            [disabled]="bookedEventIds.includes(event.id)"
-          (click)="bookEvent(event)">Book</button>
+          (click)="bookEvent(event)"> {{ bookedEventIds.includes(event.id) ? 'Booked' : 'Book' }}</button>
         </td>
       </tr>
     </tbody>

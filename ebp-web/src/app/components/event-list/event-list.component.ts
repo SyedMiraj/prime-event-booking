@@ -11,22 +11,22 @@ import { BookingService } from '../../services/booking.service';
   styleUrl: './event-list.component.css'
 })
 export class EventListComponent implements OnInit {
-  
+
   events: any[] = [];
   bookings: any[] = [];
   bookedEventIds: number[] = [];
-  eventsBaseUrl = 'http://localhost:8080/api/events'; 
-  bookingBaseUrl = 'http://localhost:8080/api/bookings'; 
+  eventsBaseUrl = 'http://localhost:8080/api/events';
+  bookingBaseUrl = 'http://localhost:8080/api/bookings';
   message = '';
 
-  constructor(private eventService: EventService, private bookingService: BookingService, private http: HttpClient) {}
+  constructor(private eventService: EventService, private bookingService: BookingService, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.eventService.getEvents().subscribe(data => this.events = data as any[]);
     this.bookingService.getBookedEvents().subscribe(bookings => {
       this.bookings = bookings;
-    this.bookedEventIds = bookings.map(b => b.id); 
-  });
+      this.bookedEventIds = bookings.map(b => b.id);
+    });
   }
 
   bookEvent(event: any): void {
@@ -44,8 +44,16 @@ export class EventListComponent implements OnInit {
         'Content-Type': 'application/json'
       }
     }).subscribe({
-      next: () => alert(`✅ Event "${event.name}" booked!`),
+      next: () => {
+        alert(`✅ Event "${event.name}" booked!`);
+
+        // Update local bookedEventIds immediately to disable the button
+        if (!this.bookedEventIds.includes(event.id)) {
+          this.bookedEventIds.push(event.id);
+        }
+      },
       error: () => alert(`❌ Failed to book event: "${event.name}"`)
     });
   }
+
 }
