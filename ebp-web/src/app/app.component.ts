@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
 
-  isLoggedIn(): boolean {
+  get isLoggedIn(): boolean {
     return localStorage.getItem('jwt_token') !== null;
   }
 

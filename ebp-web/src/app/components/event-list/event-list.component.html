@@ -1,6 +1,26 @@
-<h2>Events</h2>
-<div *ngFor="let event of events">
-    <h4>{{ event.name }}</h4>
-    <p>{{ event.description }}</p>
+<div class="events-container">
+  <h2>Available Events</h2>
+
+  <table class="event-table">
+    <thead>
+      <tr>
+        <th>Event Name</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let event of events">
+        <td>{{ event.name }}</td>
+        <td>{{ event.description }}</td>
+        <td>
+          <button 
+           [disabled]="bookedEventIds.includes(event.id)"
+          (click)="bookEvent(event)">Book</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="success-msg" *ngIf="message">{{ message }}</p>
 </div>
-<p style="color:green">{{ message }}</p>

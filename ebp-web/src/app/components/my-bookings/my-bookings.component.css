@@ -1,0 +1,31 @@
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.event-table th,
+.event-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 15px;
+}
+
+.event-table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+.event-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.info-msg {
+  margin-top: 20px;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+}

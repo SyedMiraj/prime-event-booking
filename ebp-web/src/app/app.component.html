@@ -1,7 +1,7 @@
-<nav *ngIf="isLoggedIn()">
-  <a routerLink="/events">All Events</a> |
-  <a routerLink="/my-bookings">My Bookings</a> |
-  <a routerLink="/login">Logout</a>
+<nav class="app-nav" *ngIf="isLoggedIn">
+  <a routerLink="/events" routerLinkActive="active-link">All Events</a>
+  <a routerLink="/my-bookings" routerLinkActive="active-link">My Bookings</a>
+  <a routerLink="/login" routerLinkActive="active-link">Logout</a>
 </nav>
 
 <router-outlet></router-outlet>

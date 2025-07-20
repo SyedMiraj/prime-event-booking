@@ -1,0 +1,23 @@
+.login-container {
+  max-width: 360px;
+  margin: 80px auto;
+  padding: 30px 40px; /* increase left & right padding */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  box-sizing: border-box; /* ensure padding included in width */
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  /* if needed, increase right padding a bit */
+  padding-right: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; /* prevent overflow */
+}
