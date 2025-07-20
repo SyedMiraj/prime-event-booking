@@ -1,0 +1,13 @@
+nav {
+  margin-bottom: 20px;
+}
+
+a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+a.active {
+  font-weight: bold;
+  color: green;
+}
