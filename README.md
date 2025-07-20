@@ -1,4 +1,4 @@
-# Event Booking Application
+# Event Booking Platform
 
 A simple full-stack Event Booking application using:
 
@@ -9,7 +9,11 @@ A simple full-stack Event Booking application using:
 
 ## Project Structure
 
-<pre><code>```bash prime-event-booking/ ├── ebp/ # Spring Boot application └── ebp-web/ # Angular 17 standalone app ```</code></pre>
+```bash
+prime-event-booking/
+├── ebp/        # Spring Boot application
+└── ebp-web/    # Angular 17 standalone app
+
 
 ### Run the Backend (Spring Boot)
 
