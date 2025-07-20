@@ -13,7 +13,7 @@ A simple full-stack Event Booking application using:
 prime-event-booking/
 ├── ebp/        # Spring Boot application
 └── ebp-web/    # Angular 17 standalone app
-
+```
 
 ### Run the Backend (Spring Boot)
 
