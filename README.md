@@ -9,9 +9,7 @@ A simple full-stack Event Booking application using:
 
 ## Project Structure
 
-prime-event-booking/
-├── ebp/ # Spring Boot application
-└── ebp-web/ # Angular 17 standalone app
+<pre><code>```bash prime-event-booking/ ├── ebp/ # Spring Boot application └── ebp-web/ # Angular 17 standalone app ```</code></pre>
 
 ### Run the Backend (Spring Boot)
 
