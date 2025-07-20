@@ -2,8 +2,8 @@
 
 A simple full-stack Event Booking application using:
 
-- **Frontend**: Angular 17 (Standalone API, No `app.module.ts`)
-- **Backend**: Spring Boot 3 with JWT Authentication (Mock Data, No DB)
+- **Frontend**: Angular 17 
+- **Backend**: Spring Boot 3 with JWT Authentication
 
 ---
 
